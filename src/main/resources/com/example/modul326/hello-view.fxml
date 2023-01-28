@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="445.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modul326.DiceRoll">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modul326.DiceRoll">
    <children>
       <HBox layoutX="98.0" layoutY="257.0" prefHeight="33.0" prefWidth="125.0" spacing="5.0">
          <children>
@@ -58,22 +58,40 @@
          </padding>
       </HBox>
       <Button fx:id="Roll" layoutX="134.0" layoutY="321.0" mnemonicParsing="false" onAction="#RollDice" text="Button" />
-      <VBox layoutX="390.0" layoutY="53.0" prefHeight="200.0" prefWidth="100.0">
+      <VBox layoutX="390.0" layoutY="53.0" prefHeight="243.0" prefWidth="37.0">
          <children>
-            <Label fx:id="One" text="Label" />
-            <Label fx:id="Two" text="Label" />
-            <Label fx:id="Three" text="Label" />
-            <Label fx:id="Four" text="Label" />
-            <Label fx:id="Five" text="Label" />
-            <Label fx:id="Six" text="Label" />
-            <Label fx:id="ThreeOfAKind" text="Label" />
-            <Label fx:id="FourofaKind" text="Label" />
-            <Label fx:id="FullHouse" text="Label" />
-            <Label fx:id="SmallStraight" text="Label" />
-            <Label fx:id="LargeStraight" text="Label" />
-            <Label fx:id="Chance" text="Label" />
-            <Label fx:id="Yahtzee" text="Label" />
-            <Label fx:id="Total" text="Label" />
+            <Label fx:id="One" text="0" />
+            <Label fx:id="Two" text="0" />
+            <Label fx:id="Three" text="0" />
+            <Label fx:id="Four" text="0" />
+            <Label fx:id="Five" text="0" />
+            <Label fx:id="Six" text="0" />
+            <Label fx:id="ThreeOfAKind" text="0" />
+            <Label fx:id="FourofaKind" text="0" />
+            <Label fx:id="FullHouse" text="0" />
+            <Label fx:id="SmallStraight" text="0" />
+            <Label fx:id="LargeStraight" text="0" />
+            <Label fx:id="Chance" text="0" />
+            <Label fx:id="Yahtzee" text="0" />
+            <Label fx:id="Total" text="0" />
+         </children>
+      </VBox>
+      <VBox layoutX="447.0" layoutY="50.0" prefHeight="243.0" prefWidth="37.0">
+         <children>
+            <Label fx:id="One1" text="0" />
+            <Label fx:id="Two1" text="0" />
+            <Label fx:id="Three1" text="0" />
+            <Label fx:id="Four1" text="0" />
+            <Label fx:id="Five1" text="0" />
+            <Label fx:id="Six1" text="0" />
+            <Label fx:id="ThreeOfAKind1" text="0" />
+            <Label fx:id="FourofaKind1" text="0" />
+            <Label fx:id="FullHouse1" text="0" />
+            <Label fx:id="SmallStraight1" text="0" />
+            <Label fx:id="LargeStraight1" text="0" />
+            <Label fx:id="Chance1" text="0" />
+            <Label fx:id="Yahtzee1" text="0" />
+            <Label fx:id="Total1" text="0" />
          </children>
       </VBox>
       <Label layoutX="289.0" layoutY="53.0" prefHeight="17.0" prefWidth="90.0" text="One" textAlignment="RIGHT" />
