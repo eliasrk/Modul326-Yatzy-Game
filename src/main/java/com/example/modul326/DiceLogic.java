@@ -2,7 +2,6 @@ package com.example.modul326;
 
 import java.util.Arrays;
 import java.util.Objects;
-
 public class DiceLogic {
 
     public Integer[] Dice = new Integer[5];
