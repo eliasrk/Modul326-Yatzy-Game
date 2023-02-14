@@ -1,17 +1,21 @@
 package com.example.modul326;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class DiceRoll {
     @FXML
-    private Label Dice1, Dice2, Dice3, Dice4, Dice5;
+    private Label Dice1, Dice2, Dice3, Dice4, Dice5, Player1,Player2;
     @FXML
-    private Label  One, Two, Three, Four, Five, Six, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee;
+    private Button Roll;
     @FXML
-    private Label One1, Two1, Three1, Four1, Five1, Six1, ThreeOfAKind1, FourofaKind1, FullHouse1, SmallStraight1, LargeStraight1, Chance1, Yahtzee1;
+    private Label  One, Two, Three, Four, Five, Six, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee,Total;
+    @FXML
+    private Label One1, Two1, Three1, Four1, Five1, Six1, ThreeOfAKind1, FourofaKind1, FullHouse1, SmallStraight1, LargeStraight1, Chance1, Yahtzee1,Total1;
     public List < Label > returnPlayer1Labels() {
         return List.of(One, Two, Three, Four, Five, Six, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee);
     }
@@ -29,6 +33,23 @@ public class DiceRoll {
     Integer[] player2OnOff = {1,1,1,1,1,1,1,1,1,1,1,1,1};
 
 
+
+    public void ReturnTotal(Label CalculateTotal) {
+        boolean isDone = false;
+        for (int i = 0; i < player1OnOff.length; i++) {
+            if (player1OnOff[i] != 0) {
+                isDone = false;
+            }
+            else {
+                isDone = true;
+            }
+        }
+        if(isDone){
+            CalculateTotal.setText(String.valueOf(Arrays.stream(currentArray)
+                    .mapToInt(Integer::intValue)
+                    .sum()));
+        }
+    }
     public void RollDice() {
 
         clicked++;
@@ -66,7 +87,7 @@ public class DiceRoll {
                 dice.FourOfAKindCounter(currentArray),
                 dice.FullHouseCounter(currentArray),
                 dice.checkForSmallStraight(currentArray),
-                dice.checkForSmallStraight(currentArray),
+                dice.checkForLargeStraight(currentArray),
                 dice.ChanceCounter(currentArray),
                 dice.YahtzeeCounter(currentArray)
         };
@@ -81,24 +102,33 @@ public class DiceRoll {
 
     public void togglePlayer() {
         if(clicked == 3 || clicked ==4){
+
             clearHand();
         }
+        if(clicked == 3 || clicked == 6){
+            Roll.setDisable(true);
+        }
         if (clicked <= 3) {
-
+            Player2.setStyle("-fx-background-color:#e8e8e8;");
+            Player1.setStyle("-fx-background-color:#63666A;");
             for (int i = 0; i < returnCounter().length; i++) {
                 if (player2OnOff[i] == 1) {
                     returnPlayer2Labels().get(i).setText("0");
                 }
             }
 
+            ReturnTotal(Total);
             setPlayer1();
         }
         if (clicked > 3) {
+            Player1.setStyle("-fx-background-color:#e8e8e8;");
+            Player2.setStyle("-fx-background-color:#63666A;");
             for (int i = 0; i < returnCounter().length; i++) {
                 if (player1OnOff[i] == 1) {
                     returnPlayer1Labels().get(i).setText("0");
                 }
             }
+            ReturnTotal(Total1);
             setPlayer2();
         }
         if (clicked == 6) {
@@ -124,6 +154,9 @@ public class DiceRoll {
                 player1OnOff[finalI] = 0;
                 player1.get(finalI).setStyle("-fx-background-color:#63666A;");
                 clicked = 3;
+                Player1.setStyle("-fx-background-color:#e8e8e8;");
+                Player2.setStyle("-fx-background-color:#63666A;");
+                Roll.setDisable(false);
                 clearHand();
             });
             if (player1OnOff[i] == 1) {
@@ -140,6 +173,9 @@ public class DiceRoll {
                 player2OnOff[finalI] = 0;
                 player2.get(finalI).setStyle("-fx-background-color:#63666A;");
                 clicked = 0;
+                Player2.setStyle("-fx-background-color:#e8e8e8;");
+                Player1.setStyle("-fx-background-color:#63666A;");
+                Roll.setDisable(false);
                 clearHand();
             });
             if (player1OnOff[i] == 1) {

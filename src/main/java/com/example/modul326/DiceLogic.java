@@ -109,20 +109,9 @@ public class DiceLogic {
     }
     //FullHouse
     public Integer FullHouseCounter(Integer[] Dice) {
-        boolean FullHouseCounter = false;
-        Integer[] temp = {OneCounter(Dice), TwoCounter(Dice), ThreeCounter(Dice), FourCounter(Dice), FiveCounter(Dice), SixCounter(Dice)};
-        //count how many zeros are in temp
-        int count = 0;
-        for (Integer integer : temp) {
-            if (integer == 0) {
-                count++;
-            }
-        }
-        if (count == 4) {
-            FullHouseCounter = true;
-        }
-        //return the array of temp
-        if (FullHouseCounter) {
+        Arrays.sort(Dice);
+        if ((Dice[0] == Dice[1] && Dice[1] == Dice[2] && Dice[3] == Dice[4])
+                || (Dice[0] == Dice[1] && Dice[2] == Dice[3] && Dice[3] == Dice[4])) {
             return 25;
         } else {
             return 0;
@@ -130,6 +119,12 @@ public class DiceLogic {
     }
     //check for small straight
     public Integer checkForSmallStraight(Integer[] Dice) {
+
+        /*Arrays.sort(rolls);
+
+    // Check if the rolls represent a small straight
+    if ((rolls[0] == 1 && rolls[1] == 2 && rolls[2] == 3 && rolls[3] == 4)
+            || (rolls[1] == 2 && rolls[2] == 3 && rolls[3] == 4 && rolls[4] == 5)*/
         for (int i = 0; i < Dice.length - 3; i++) {
             int count = 0;
             for (int j = i; j < Dice.length; j++) {
@@ -144,7 +139,7 @@ public class DiceLogic {
         return 0;
     }
     //check for large straight
-    public Boolean LargeStraightCounter(Integer[] Dice) {
+    public Integer checkForLargeStraight(Integer[] Dice) {
         for (int i = 0; i < Dice.length - 4; i++) {
             int count = 0;
             for (int j = i; j < Dice.length; j++) {
@@ -152,11 +147,11 @@ public class DiceLogic {
                     count++;
                 }
                 if (count == 5) {
-                    return true;
+                    return 40;
                 }
             }
         }
-        return false;
+        return 0;
     }
     //check for chance
     public Integer ChanceCounter(Integer[] Dice) {
@@ -173,4 +168,5 @@ public class DiceLogic {
         }
         return 0;
     }
+
 }

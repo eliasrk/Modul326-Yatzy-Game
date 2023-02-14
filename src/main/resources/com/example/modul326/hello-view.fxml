@@ -108,5 +108,7 @@
       <Label layoutX="289.0" layoutY="240.0" prefHeight="17.0" prefWidth="90.0" text="Chance" textAlignment="RIGHT" />
       <Label layoutX="289.0" layoutY="257.0" prefHeight="17.0" prefWidth="90.0" text="Zahtzee" textAlignment="RIGHT" />
       <Label layoutX="289.0" layoutY="274.0" prefHeight="17.0" prefWidth="90.0" text="Total" textAlignment="RIGHT" />
+      <Label fx:id="Player1" alignment="CENTER" layoutX="376.0" layoutY="33.0" text="Player 1" textAlignment="CENTER" />
+      <Label fx:id="Player2" layoutX="433.0" layoutY="33.0" text="Player 2" textAlignment="CENTER" />
    </children>
 </AnchorPane>
