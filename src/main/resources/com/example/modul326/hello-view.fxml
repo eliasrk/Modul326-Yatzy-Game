@@ -4,13 +4,172 @@
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="370.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modul326.DiceRoll">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.0" prefWidth="692.0" style="-fx-background-color: linear-gradient(#5F0A87, #A4508B);" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.modul326.DiceRoll">
    <children>
-      <HBox layoutX="98.0" layoutY="257.0" prefHeight="33.0" prefWidth="125.0" spacing="5.0">
+      <Pane layoutX="378.0" layoutY="300.0" prefHeight="209.0" prefWidth="300.0" style="-fx-background-color: #DDD6FE;-fx-background-radius: 10;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);" AnchorPane.topAnchor="300.0">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </Pane>
+      <Pane layoutX="378.0" layoutY="521.0" prefHeight="27.0" prefWidth="300.0" style="-fx-background-color: #DDD6FE;-fx-background-radius: 10;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </Pane>
+      <Pane layoutX="377.0" layoutY="19.0" prefHeight="271.0" prefWidth="300.0" style="-fx-background-color: #DDD6FE;-fx-background-radius: 10;-fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);" AnchorPane.leftAnchor="377.0">
+         <children>
+            <GridPane alignment="CENTER">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.199951171875" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="99.199951171875" minWidth="10.0" prefWidth="99.199951171875" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="104.0" minWidth="10.0" prefWidth="100.800048828125" />
+              </columnConstraints>
+              <rowConstraints>
+                  <RowConstraints maxHeight="36.000006103515624" minHeight="10.0" prefHeight="36.000006103515624" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="24.799993896484374" minHeight="10.0" prefHeight="24.799993896484374" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="0.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="5.0" prefHeight="5.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label fx:id="One" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="100.0" style="-fx-background-radius: 10;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <Label fx:id="Two" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <Label fx:id="Three" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                  <Label fx:id="Four" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                  <Label fx:id="Five" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                  <Label fx:id="Six" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+                  <Label fx:id="ThreeOfAKind" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+                  <Label fx:id="FourofaKind" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+                  <Label fx:id="FullHouse" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+                  <Label fx:id="SmallStraight" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+                  <Label fx:id="LargeStraight" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+                  <Label fx:id="Chance" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+                  <Label fx:id="Yahtzee" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="16" />
+                  <Label fx:id="Total" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="18" />
+                  <Label fx:id="One1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                  <Label fx:id="Two1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                  <Label fx:id="Three1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                  <Label fx:id="Four1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                  <Label fx:id="Five1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                  <Label fx:id="Six1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="6" />
+                  <Label fx:id="ThreeOfAKind1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="10" />
+                  <Label fx:id="FourofaKind1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="11" />
+                  <Label fx:id="FullHouse1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="12" />
+                  <Label fx:id="SmallStraight1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="13" />
+                  <Label fx:id="LargeStraight1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="14" />
+                  <Label fx:id="Chance1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="15" />
+                  <Label fx:id="Yahtzee1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="16" />
+                  <Label fx:id="Total1" alignment="CENTER" contentDisplay="CENTER" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="18" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="91.0" text="One" GridPane.rowIndex="1">
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Two" GridPane.rowIndex="2">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Three" GridPane.rowIndex="3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Four" GridPane.rowIndex="4">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Five" GridPane.rowIndex="5">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Six" GridPane.rowIndex="6">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Three of a Kind" GridPane.rowIndex="10">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Four of Kind" GridPane.rowIndex="11">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Full House" GridPane.rowIndex="12">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Small Straight" GridPane.rowIndex="13">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Large Straight" GridPane.rowIndex="14">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Chance" GridPane.rowIndex="15">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Yatzee" GridPane.rowIndex="16">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="17.0" prefWidth="90.0" text="Total" GridPane.rowIndex="18">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </Label>
+                  <Label fx:id="Player1" alignment="CENTER" prefHeight="18.0" prefWidth="99.0" text="Player 1" textAlignment="CENTER" GridPane.columnIndex="1" />
+                  <Label fx:id="Player2" alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="104.0" text="Player 2" textAlignment="CENTER" GridPane.columnIndex="2" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="90.0" text="Bonus" GridPane.rowIndex="7" />
+                  <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="90.0" text="Total" GridPane.rowIndex="8" />
+                  <Label fx:id="Bonus" alignment="CENTER" prefHeight="18.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+                  <Label fx:id="Bonus1" alignment="CENTER" prefHeight="18.0" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="7" />
+                  <Label fx:id="SubTotal" alignment="CENTER" prefHeight="18.0" prefWidth="100.0" text="0" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+                  <Label fx:id="SubTotal1" alignment="CENTER" prefHeight="18.0" prefWidth="100.0" text="0" GridPane.columnIndex="2" GridPane.rowIndex="8" />
+               </children>
+            </GridPane>
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </Pane>
+      <HBox layoutX="94.0" layoutY="457.0" prefHeight="33.0" prefWidth="125.0" spacing="5.0" style="-fx-background-color: #DDD6FE;-fx-background-radius: 10; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 0);">
          <children>
             <Label fx:id="Dice1" text="0">
                <padding>
@@ -57,58 +216,6 @@
             <Insets left="5.0" right="5.0" />
          </padding>
       </HBox>
-      <Button fx:id="Roll" layoutX="134.0" layoutY="321.0" mnemonicParsing="false" onAction="#RollDice" text="Button" />
-      <VBox layoutX="390.0" layoutY="53.0" prefHeight="243.0" prefWidth="37.0">
-         <children>
-            <Label fx:id="One" text="0" />
-            <Label fx:id="Two" text="0" />
-            <Label fx:id="Three" text="0" />
-            <Label fx:id="Four" text="0" />
-            <Label fx:id="Five" text="0" />
-            <Label fx:id="Six" text="0" />
-            <Label fx:id="ThreeOfAKind" text="0" />
-            <Label fx:id="FourofaKind" text="0" />
-            <Label fx:id="FullHouse" text="0" />
-            <Label fx:id="SmallStraight" text="0" />
-            <Label fx:id="LargeStraight" text="0" />
-            <Label fx:id="Chance" text="0" />
-            <Label fx:id="Yahtzee" text="0" />
-            <Label fx:id="Total" text="0" />
-         </children>
-      </VBox>
-      <VBox layoutX="447.0" layoutY="50.0" prefHeight="243.0" prefWidth="37.0">
-         <children>
-            <Label fx:id="One1" text="0" />
-            <Label fx:id="Two1" text="0" />
-            <Label fx:id="Three1" text="0" />
-            <Label fx:id="Four1" text="0" />
-            <Label fx:id="Five1" text="0" />
-            <Label fx:id="Six1" text="0" />
-            <Label fx:id="ThreeOfAKind1" text="0" />
-            <Label fx:id="FourofaKind1" text="0" />
-            <Label fx:id="FullHouse1" text="0" />
-            <Label fx:id="SmallStraight1" text="0" />
-            <Label fx:id="LargeStraight1" text="0" />
-            <Label fx:id="Chance1" text="0" />
-            <Label fx:id="Yahtzee1" text="0" />
-            <Label fx:id="Total1" text="0" />
-         </children>
-      </VBox>
-      <Label layoutX="289.0" layoutY="53.0" prefHeight="17.0" prefWidth="90.0" text="One" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="70.0" prefHeight="17.0" prefWidth="90.0" text="Two" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="87.0" prefHeight="17.0" prefWidth="90.0" text="Three" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="104.0" prefHeight="17.0" prefWidth="90.0" text="Four" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="121.0" prefHeight="17.0" prefWidth="90.0" text="Five" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="138.0" prefHeight="17.0" prefWidth="90.0" text="Six" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="155.0" prefHeight="17.0" prefWidth="90.0" text="Three of a Kind" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="172.0" prefHeight="17.0" prefWidth="90.0" text="Four of Kind" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="189.0" prefHeight="17.0" prefWidth="90.0" text="Full House" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="206.0" prefHeight="17.0" prefWidth="90.0" text="Small Straight" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="223.0" prefHeight="17.0" prefWidth="90.0" text="Large Straight" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="240.0" prefHeight="17.0" prefWidth="90.0" text="Chance" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="257.0" prefHeight="17.0" prefWidth="90.0" text="Zahtzee" textAlignment="RIGHT" />
-      <Label layoutX="289.0" layoutY="274.0" prefHeight="17.0" prefWidth="90.0" text="Total" textAlignment="RIGHT" />
-      <Label fx:id="Player1" alignment="CENTER" layoutX="376.0" layoutY="33.0" text="Player 1" textAlignment="CENTER" />
-      <Label fx:id="Player2" layoutX="433.0" layoutY="33.0" text="Player 2" textAlignment="CENTER" />
+      <Button fx:id="Roll" layoutX="130.0" layoutY="521.0" mnemonicParsing="false" onAction="#RollDice" text="Roll" />
    </children>
 </AnchorPane>

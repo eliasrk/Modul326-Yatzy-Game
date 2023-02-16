@@ -4,11 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561793f7-fed5-4c1f-a2f3-c849f2a99437" name="Changes" comment="added login page">
+    <list default="true" id="561793f7-fed5-4c1f-a2f3-c849f2a99437" name="Changes" comment="added sql connection for authentication">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/Highscore.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/Login.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/Login.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +55,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
     &quot;last_directory_selection&quot;: &quot;C:/Users/elias/IdeaProjects/Modul326/src/main/java/com/example/modul326&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/elias/IdeaProjects/Modul326/src/main/java/com/example/modul326&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/elias/Downloads&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -130,7 +133,11 @@
       <workItem from="1676301315836" duration="1513000" />
       <workItem from="1676305148247" duration="4943000" />
       <workItem from="1676362385999" duration="9133000" />
-      <workItem from="1676381169653" duration="4802000" />
+      <workItem from="1676381169653" duration="4863000" />
+      <workItem from="1676456130924" duration="6905000" />
+      <workItem from="1676472378955" duration="3944000" />
+      <workItem from="1676486958000" duration="7239000" />
+      <workItem from="1676536842843" duration="1009000" />
     </task>
     <task id="LOCAL-00001" summary="Everything Works">
       <created>1674903581177</created>
@@ -160,7 +167,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676384660746</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="added sql connection for authentication">
+      <created>1676387443969</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1676387443969</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,6 +195,7 @@
     <MESSAGE value="Everything Works" />
     <MESSAGE value="added selection" />
     <MESSAGE value="added login page" />
-    <option name="LAST_COMMIT_MESSAGE" value="added login page" />
+    <MESSAGE value="added sql connection for authentication" />
+    <option name="LAST_COMMIT_MESSAGE" value="added sql connection for authentication" />
   </component>
 </project>

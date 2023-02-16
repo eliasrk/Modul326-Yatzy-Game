@@ -13,9 +13,17 @@ public class DiceRoll {
     @FXML
     private Button Roll;
     @FXML
-    private Label  One, Two, Three, Four, Five, Six, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee,Total;
+    private Label  One, Two, Three, Four, Five, Six,Bonus,SubTotal, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee,Total;
     @FXML
-    private Label One1, Two1, Three1, Four1, Five1, Six1, ThreeOfAKind1, FourofaKind1, FullHouse1, SmallStraight1, LargeStraight1, Chance1, Yahtzee1,Total1;
+    private Label One1, Two1, Three1, Four1, Five1, Six1,Bonus1,SubTotal1, ThreeOfAKind1, FourofaKind1, FullHouse1, SmallStraight1, LargeStraight1, Chance1, Yahtzee1,Total1;
+
+    public List < Label > returnPlayer1OneToSix() {
+        return List.of(One, Two, Three, Four, Five, Six);
+    }
+    public List < Label > returnPlayer2OneToSix() {
+        return List.of(One1, Two1, Three1, Four1, Five1, Six1);
+    }
+
     public List < Label > returnPlayer1Labels() {
         return List.of(One, Two, Three, Four, Five, Six, ThreeOfAKind, FourofaKind, FullHouse, SmallStraight, LargeStraight, Chance, Yahtzee);
     }
@@ -34,20 +42,42 @@ public class DiceRoll {
 
 
 
-    public void ReturnTotal(Label CalculateTotal) {
-        boolean isDone = false;
-        for (int i = 0; i < player1OnOff.length; i++) {
-            if (player1OnOff[i] != 0) {
-                isDone = false;
+    public void setBonus() {
+        setBonusHelper(returnPlayer1OneToSix(), Bonus, SubTotal);
+    }
+
+    public void setBonus1() {
+        setBonusHelper(returnPlayer2OneToSix(), Bonus1, SubTotal1);
+    }
+
+    private void setBonusHelper(List<Label> labels, Label bonusLabel, Label subTotalLabel) {
+        int sum = labels.stream().mapToInt(label -> Integer.parseInt(label.getText())).sum();
+        int bonus = sum >= 63 ? 35 : 0;
+        bonusLabel.setText(String.valueOf(bonus));
+        subTotalLabel.setText(String.valueOf(sum + bonus));
+    }
+    public void updateHighscore() {
+        int total = Integer.parseInt(Total.getText().trim());
+        int total1 = Integer.parseInt(Total1.getText().trim());
+        Highscore highscore = new Highscore();
+
+        int highestScore = Math.max(total, total1);
+        String playerName = (total > total1) ? Player1.getText().trim() : Player2.getText().trim();
+
+        highscore.addHighscore(highestScore, playerName);
+    }
+    public void ReturnTotal(Label CalculateTotal, List<Integer> playerOnOff,Integer[] playerOnOffArray) {
+        setBonus();
+        setBonus1();
+        boolean isDone = !playerOnOff.contains(1);
+        if (isDone) {
+            int total = 0;
+            List<Label> playerLabels = (playerOnOffArray == player1OnOff) ? returnPlayer1Labels() : returnPlayer2Labels();
+            for (Label label : playerLabels) {
+                total += Integer.parseInt(label.getText());
             }
-            else {
-                isDone = true;
-            }
-        }
-        if(isDone){
-            CalculateTotal.setText(String.valueOf(Arrays.stream(currentArray)
-                    .mapToInt(Integer::intValue)
-                    .sum()));
+            CalculateTotal.setText(String.valueOf(total));
+            updateHighscore();
         }
     }
     public void RollDice() {
@@ -63,7 +93,7 @@ public class DiceRoll {
                     returnDiceLabels().get(finalI).setStyle("-fx-background-color:#63666A;");
                     currentRoll[finalI] = 0;
                 } else {
-                    returnDiceLabels().get(finalI).setStyle("-fx-background-color:#e8e8e8;");
+                    returnDiceLabels().get(finalI).setStyle("-fx-background-color:#DDD6FE;");
                     currentRoll[finalI] = 1;
                 }
             });
@@ -73,7 +103,6 @@ public class DiceRoll {
         }
         togglePlayer();
     }
-
     public Integer[] returnCounter() {
         DiceLogic dice = new DiceLogic();
         return new Integer[]{
@@ -96,20 +125,19 @@ public class DiceRoll {
         for (int i = 0; i < currentRoll.length; i++) {
             currentRoll = new Integer[]{1, 1, 1, 1, 1};
             currentRoll[i] = 1;
-            returnDiceLabels().get(i).setStyle("-fx-background-color:#e8e8e8;");
+            returnDiceLabels().get(i).setStyle("-fx-background-color:#DDD6FE;");
         }
     }
 
     public void togglePlayer() {
         if(clicked == 3 || clicked ==4){
-
             clearHand();
         }
         if(clicked == 3 || clicked == 6){
             Roll.setDisable(true);
         }
         if (clicked <= 3) {
-            Player2.setStyle("-fx-background-color:#e8e8e8;");
+            Player2.setStyle("-fx-background-color:#DDD6FE;");
             Player1.setStyle("-fx-background-color:#63666A;");
             for (int i = 0; i < returnCounter().length; i++) {
                 if (player2OnOff[i] == 1) {
@@ -117,18 +145,18 @@ public class DiceRoll {
                 }
             }
 
-            ReturnTotal(Total);
+            ReturnTotal(Total, List.of(player1OnOff),player1OnOff);
             setPlayer1();
         }
         if (clicked > 3) {
-            Player1.setStyle("-fx-background-color:#e8e8e8;");
+            Player1.setStyle("-fx-background-color:#DDD6FE;");
             Player2.setStyle("-fx-background-color:#63666A;");
             for (int i = 0; i < returnCounter().length; i++) {
                 if (player1OnOff[i] == 1) {
                     returnPlayer1Labels().get(i).setText("0");
                 }
             }
-            ReturnTotal(Total1);
+            ReturnTotal(Total1, List.of(player2OnOff),player2OnOff);
             setPlayer2();
         }
         if (clicked == 6) {
@@ -144,28 +172,31 @@ public class DiceRoll {
     }
 
     public void setPlayer1() {
-
-        List < Label > player1 = returnPlayer1Labels();
-        returnCounter();
+        List<Label> player1 = returnPlayer1Labels();
+        Integer[] counter = returnCounter();
         setText();
-        for (int i = 0; i < returnCounter().length; i++) {
+        for (int i = 0; i < counter.length; i++) {
             int finalI = i;
-            player1.get(i).setOnMouseClicked(event -> {
-                player1OnOff[finalI] = 0;
-                player1.get(finalI).setStyle("-fx-background-color:#63666A;");
-                clicked = 3;
-                Player1.setStyle("-fx-background-color:#e8e8e8;");
-                Player2.setStyle("-fx-background-color:#63666A;");
-                Roll.setDisable(false);
-                clearHand();
-            });
+            Label label = player1.get(i);
+            if (clicked <= 3) {
+                label.setOnMouseClicked(event -> {
+                    player1OnOff[finalI] = 0;
+                    label.setStyle("-fx-background-color:#63666A;");
+                    clicked = 3;
+                    Player1.setStyle("-fx-background-color:#DDD6FE;");
+                    Player2.setStyle("-fx-background-color:#63666A;");
+                    Roll.setDisable(false);
+                    clearHand();
+                });
+            }
             if (player1OnOff[i] == 1) {
-                player1.get(i).setText(String.valueOf(returnCounter()[i]));
+                label.setText(String.valueOf(counter[i]));
+                System.out.println(counter[i]);
             }
         }
     }
     public void setPlayer2() {
-        List < Label > player2 = returnPlayer2Labels();
+        List<Label> player2 = returnPlayer2Labels();
         setText();
         for (int i = 0; i < returnCounter().length; i++) {
             int finalI = i;
@@ -173,12 +204,12 @@ public class DiceRoll {
                 player2OnOff[finalI] = 0;
                 player2.get(finalI).setStyle("-fx-background-color:#63666A;");
                 clicked = 0;
-                Player2.setStyle("-fx-background-color:#e8e8e8;");
+                Player2.setStyle("-fx-background-color:#DDD6FE;");
                 Player1.setStyle("-fx-background-color:#63666A;");
                 Roll.setDisable(false);
                 clearHand();
             });
-            if (player1OnOff[i] == 1) {
+            if (player2OnOff[i] == 1) {
                 player2.get(i).setText(String.valueOf(returnCounter()[i]));
             }
         }
