@@ -4,13 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="561793f7-fed5-4c1f-a2f3-c849f2a99437" name="Changes" comment="added sql connection for authentication">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/Highscore.java" afterDir="false" />
+    <list default="true" id="561793f7-fed5-4c1f-a2f3-c849f2a99437" name="Changes" comment="MVP">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/HighscoreController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/TableData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/Highscore.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRollController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/Highscore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/MysqlConnection.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/yahtzee_highscore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/yahtzee_highscore.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -23,6 +27,7 @@
       <list>
         <option value="FxmlFile" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -78,8 +83,8 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="HelloApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.example.modul326.HelloApplication" />
+    <configuration name="AppInitializer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.modul326.AppInitializer" />
       <module name="Modul326" />
       <extension name="coverage">
         <pattern>
@@ -104,7 +109,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.HelloApplication" />
+        <item itemvalue="Application.AppInitializer" />
       </list>
     </recent_temporary>
   </component>
@@ -137,7 +142,8 @@
       <workItem from="1676456130924" duration="6905000" />
       <workItem from="1676472378955" duration="3944000" />
       <workItem from="1676486958000" duration="7239000" />
-      <workItem from="1676536842843" duration="1009000" />
+      <workItem from="1676536842843" duration="20581000" />
+      <workItem from="1676622781238" duration="285000" />
     </task>
     <task id="LOCAL-00001" summary="Everything Works">
       <created>1674903581177</created>
@@ -174,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676387443969</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="MVP">
+      <created>1676537996384</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1676537996384</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,6 +209,7 @@
     <MESSAGE value="added selection" />
     <MESSAGE value="added login page" />
     <MESSAGE value="added sql connection for authentication" />
-    <option name="LAST_COMMIT_MESSAGE" value="added sql connection for authentication" />
+    <MESSAGE value="MVP" />
+    <option name="LAST_COMMIT_MESSAGE" value="MVP" />
   </component>
 </project>

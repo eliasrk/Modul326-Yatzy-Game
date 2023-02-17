@@ -16,13 +16,13 @@
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
 --
--- Table structure for table `highscore`
+-- Table structure for table `mysqlConnection`
 --
 
-DROP TABLE IF EXISTS `highscore`;
+DROP TABLE IF EXISTS `mysqlConnection`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
-CREATE TABLE `highscore` (
+CREATE TABLE `mysqlConnection` (
   `idHighscore` int NOT NULL AUTO_INCREMENT,
   `name` varchar(45) DEFAULT NULL,
   `Score` int DEFAULT NULL,
@@ -32,12 +32,12 @@ CREATE TABLE `highscore` (
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
--- Dumping data for table `highscore`
+-- Dumping data for table `mysqlConnection`
 --
 
-LOCK TABLES `highscore` WRITE;
-/*!40000 ALTER TABLE `highscore` DISABLE KEYS */;
-/*!40000 ALTER TABLE `highscore` ENABLE KEYS */;
+LOCK TABLES `mysqlConnection` WRITE;
+/*!40000 ALTER TABLE `mysqlConnection` DISABLE KEYS */;
+/*!40000 ALTER TABLE `mysqlConnection` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
 

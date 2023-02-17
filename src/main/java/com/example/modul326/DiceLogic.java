@@ -2,16 +2,19 @@ package com.example.modul326;
 
 import java.util.Arrays;
 import java.util.Objects;
+
 public class DiceLogic {
 
     public Integer[] Dice = new Integer[5];
     Integer DiceAmount = 5;
+
     //create a function that returns an array of random numbers between 1 and 6
     public void DiceGenerator() {
         for (int i = 0; i < DiceAmount; i++) {
             Dice[i] = (int) (Math.random() * 6 + 1);
         }
     }
+
     //1's counter
     public Integer OneCounter(Integer[] Dice) {
         Integer OneCounter = 0;
@@ -22,6 +25,7 @@ public class DiceLogic {
         }
         return OneCounter;
     }
+
     //2's counter
     public Integer TwoCounter(Integer[] Dice) {
         Integer TwoCounter = 0;
@@ -33,6 +37,7 @@ public class DiceLogic {
         TwoCounter = TwoCounter * 2;
         return TwoCounter;
     }
+
     //3's counter
     public Integer ThreeCounter(Integer[] Dice) {
         Integer ThreeCounter = 0;
@@ -44,6 +49,7 @@ public class DiceLogic {
         ThreeCounter = ThreeCounter * 3;
         return ThreeCounter;
     }
+
     //4's counter
     public Integer FourCounter(Integer[] Dice) {
         Integer FourCounter = 0;
@@ -55,6 +61,7 @@ public class DiceLogic {
         FourCounter = FourCounter * 4;
         return FourCounter;
     }
+
     //5's counter
     public Integer FiveCounter(Integer[] Dice) {
         Integer FiveCounter = 0;
@@ -66,6 +73,7 @@ public class DiceLogic {
         FiveCounter = FiveCounter * 5;
         return FiveCounter;
     }
+
     // 6's counter
     public Integer SixCounter(Integer[] Dice) {
         Integer SixCounter = 0;
@@ -77,6 +85,7 @@ public class DiceLogic {
         SixCounter = SixCounter * 6;
         return SixCounter;
     }
+
     //3 of a kind
     public Integer ThreeOfAKindCounter(Integer[] Dice) {
         for (Integer die : Dice) {
@@ -86,12 +95,13 @@ public class DiceLogic {
                     count++;
                 }
                 if (count == 3) {
-                    return 3*die;
+                    return 3 * die;
                 }
             }
         }
         return 0;
     }
+
     //4 of a kind
     public Integer FourOfAKindCounter(Integer[] Dice) {
         for (Integer die : Dice) {
@@ -101,12 +111,13 @@ public class DiceLogic {
                     count++;
                 }
                 if (count == 4) {
-                    return 4*die;
+                    return 4 * die;
                 }
             }
         }
         return 0;
     }
+
     //FullHouse
     public Integer FullHouseCounter(Integer[] Dice) {
         Arrays.sort(Dice);
@@ -117,6 +128,7 @@ public class DiceLogic {
             return 0;
         }
     }
+
     //check for small straight
     public Integer checkForSmallStraight(Integer[] Dice) {
 
@@ -128,7 +140,7 @@ public class DiceLogic {
         for (int i = 0; i < Dice.length - 3; i++) {
             int count = 0;
             for (int j = i; j < Dice.length; j++) {
-                if (Dice[j] == Dice[i]+count) {
+                if (Dice[j] == Dice[i] + count) {
                     count++;
                 }
                 if (count == 4) {
@@ -138,12 +150,13 @@ public class DiceLogic {
         }
         return 0;
     }
+
     //check for large straight
     public Integer checkForLargeStraight(Integer[] Dice) {
         for (int i = 0; i < Dice.length - 4; i++) {
             int count = 0;
             for (int j = i; j < Dice.length; j++) {
-                if (Dice[j] == Dice[i]+count) {
+                if (Dice[j] == Dice[i] + count) {
                     count++;
                 }
                 if (count == 5) {
@@ -153,6 +166,7 @@ public class DiceLogic {
         }
         return 0;
     }
+
     //check for chance
     public Integer ChanceCounter(Integer[] Dice) {
         int sum = 0;
@@ -161,9 +175,10 @@ public class DiceLogic {
         }
         return sum;
     }
+
     //yahtzee
     public Integer YahtzeeCounter(Integer[] Dice) {
-        if(Arrays.stream(Dice).allMatch(val -> val == Dice[0])) {
+        if (Arrays.stream(Dice).allMatch(val -> val == Dice[0])) {
             return 50;
         }
         return 0;
