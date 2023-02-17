@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="561793f7-fed5-4c1f-a2f3-c849f2a99437" name="Changes" comment="MVP">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/HighscoreController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/TableData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/Highscore.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRoll.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/DiceRollController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/Highscore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/MysqlConnection.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/yahtzee_highscore.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/yahtzee_highscore.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/hello-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/AppInitializer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/modul326/AppInitializer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/modul326/dice.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/modul326/MainView.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/modul326/MainView.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,25 +44,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;extract.method.default.visibility&quot;: &quot;private&quot;,
-    &quot;last_directory_selection&quot;: &quot;C:/Users/elias/IdeaProjects/Modul326/src/main/java/com/example/modul326&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/elias/Downloads&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "extract.method.default.visibility": "private",
+    "last_directory_selection": "C:/Users/elias/IdeaProjects/Modul326/src/main/java/com/example/modul326",
+    "last_opened_file_path": "C:/Users/elias/Downloads",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\elias\IdeaProjects\Modul326\src\main\java\com\example\modul326" />
@@ -143,7 +136,7 @@
       <workItem from="1676472378955" duration="3944000" />
       <workItem from="1676486958000" duration="7239000" />
       <workItem from="1676536842843" duration="20581000" />
-      <workItem from="1676622781238" duration="285000" />
+      <workItem from="1676622781238" duration="9921000" />
     </task>
     <task id="LOCAL-00001" summary="Everything Works">
       <created>1674903581177</created>
@@ -187,7 +180,14 @@
       <option name="project" value="LOCAL" />
       <updated>1676537996384</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="MVP">
+      <created>1676624175396</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1676624175396</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

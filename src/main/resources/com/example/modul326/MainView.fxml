@@ -217,10 +217,10 @@
             <Insets left="5.0" right="5.0" />
          </padding>
       </HBox>
-      <Button fx:id="Roll" layoutX="130.0" layoutY="521.0" mnemonicParsing="false" onAction="#RollDice" text="Roll" />
+      <Button fx:id="Roll" layoutX="130.0" layoutY="521.0" mnemonicParsing="false" onAction="#RollDice" text="Roll" style="-fx-background-radius: 10; -fx-background-color: #5F0A87;-fx-text-fill: white;-fx-font-weight: bold;" />
       <TextField fx:id="Player1Field" layoutX="54.0" layoutY="19.0" promptText="Player 1" />
       <TextField fx:id="Player2Field" layoutX="54.0" layoutY="57.0" promptText="Player 2" />
-      <Button fx:id="Player1Button" layoutX="212.0" layoutY="19.0" mnemonicParsing="false" onAction="#nameChanger" text="Set Name" />
-      <Button fx:id="Player2Button" layoutX="212.0" layoutY="57.0" mnemonicParsing="false" onAction="#nameChanger" text="Set Name" />
+      <Button fx:id="Player1Button" layoutX="212.0" layoutY="19.0" mnemonicParsing="false" onAction="#nameChanger" text="Set Name" style="-fx-background-radius: 10; -fx-background-color: #A4508B;-fx-text-fill: white;-fx-font-weight: bold;"/>
+      <Button fx:id="Player2Button" layoutX="212.0" layoutY="57.0" mnemonicParsing="false" onAction="#nameChanger" text="Set Name" style="-fx-background-radius: 10; -fx-background-color: #A4508B;-fx-text-fill: white;-fx-font-weight: bold;"/>
    </children>
 </AnchorPane>
